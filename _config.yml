@@ -2,7 +2,7 @@
 title: Dr Neville Grech
 email: me@nevillegrech.com
 description: > # this means to ignore newlines until "baseurl:"
-  Personal web site for Neville Grech.
+  Personal web site
 baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "http://www.nevillegrech.com" # the base hostname & protocol for your site
 linkedin_username: nevillegrech
