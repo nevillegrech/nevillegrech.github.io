@@ -4,10 +4,13 @@ title: About
 permalink: /about/
 ---
 
+## Bio
+
 Dr Neville Grech holds a Reach High postdoctoral fellowship and conducts his research at the University of Athens under the leadership of [Yannis Smaragdakis](https://yanniss.github.io/) and at the University of Malta. Neville's main specialization is on blockchain security and program analysis. His current work includes decompilers and security analyzers for the Ethereum platform and Java whole program and taint analysis frameworks. Previously, Neville was a Senior Research Associate at the University of Bristol, and has also worked as a Data Scientist and Software Engineer in industry. He holds a PhD from the University of Southampton.
 
+[Google scholar profile](https://scholar.google.com/citations?user=QP3gdYAAAAAJ)
 
-Publications:
+## Publications
 
 Grech, N., Kong, M., Jurisevic, A., Brent, L., Scholz, B., Smaragdakis, Y. (2018), MadMax: Surviving Out-of-Gas Conditions in Ethereum Smart Contracts. To Appear: Proceedings of the ACM on Programming Languages (OOPSLA).
 
