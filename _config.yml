@@ -8,8 +8,8 @@ description: > # this means to ignore newlines until "url:"
 footer_text: >
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
-#url:  "http://www.nevillegrech.com" # the base hostname & protocol for your site
-baseurl: / # the subpath of your site, e.g. /blog/
+url:  "http://www.nevillegrech.com" # the base hostname & protocol for your site
+baseurl: # the subpath of your site, e.g. /blog/
 
 # -----------------------------------------------------------------------------
 # Social integration
