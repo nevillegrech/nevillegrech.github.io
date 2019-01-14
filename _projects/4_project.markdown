@@ -1,55 +1,35 @@
 ---
 layout: page
-title: Project 4
-description: another without an image
-img:
+title: Shooting From the Heap
+description: Ultra-Scalable Static Analysis with Heap Snapshots
+img: /assets/img/heapdl.jpg
 ---
 
-Every project has a beautiful feature shocase page. It's easy to include images, in a flexible 3-column grid format. Make your photos 1/3, 2/3, or full width.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+[Shooting from the Heap: Ultra-Scalable Static Analysis with Heap Snapshots (pdf)](http://www.nevillegrech.com/assets/pdf/shootingfromtheheap-issta18.pdf)
 
-    ---
-    layout: page
-    title: Project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## Abstract
 
+Traditional whole-program static analysis (e.g., a points-to analysis that models the heap) encounters scalability problems for realistic applications.  We propose a "featherweight" analysis that combines a dynamic snapshot of the heap with otherwise full static analysis of program behavior. The analysis is extremely scalable, offering speedups of well over 3x, with complexity empirically evaluated to grow linearly relative to the number of reachable methods. The analysis is also an excellent tradeoff of precision and recall (relative to different dynamic executions): while it can never fully capture all program behaviors (i.e., it cannot match the near-perfect recall of a full static analysis) it often approaches it closely while achieving much higher (3.5x) precision.
 
-<div class="img_row">
-    <img class="col one left" src="{{ site.baseurl }}/assets/img/1.jpg" alt="" title="example image"/>
-    <img class="col one left" src="{{ site.baseurl }}/assets/img/2.jpg" alt="" title="example image"/>
-    <img class="col one left" src="{{ site.baseurl }}/assets/img/3.jpg" alt="" title="example image"/>
-</div>
-<div class="col three caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="img_row">
-    <img class="col three left" src="{{ site.baseurl }}/assets/img/5.jpg" alt="" title="example image"/>
-</div>
-<div class="col three caption">
-    This image can also have a caption. It's like magic.
-</div>
+## Download and Usage
+This work is part of the [Doop pointer analysis framework](https://bitbucket.org/yanniss/doop). Please first follow the instructions for the installation of Doop. You can test that the installation was successful by running Doop using standard options:
 
-You can also put regular text between your rows of images. Say you wanted to write a little bit about your project before you posted the rest of the images. You describe how you toiled, sweated, *bled* for your project, and then.... you reveal it's glory in the next row of images.
+```
+./doop -a context-insensitive -i <jar to analyze> --platform java_8
+```
 
 
-<div class="img_row">
-    <img class="col two left" src="{{ site.baseurl }}/assets/img/6.jpg" alt="" title="example image"/>
-    <img class="col one left" src="{{ site.baseurl }}/assets/img/11.jpg" alt="" title="example image"/>
-</div>
-<div class="col three caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+Doop also automatically downloads [HeapDL](https://github.com/plast-lab/heapdl), which is used by the featherweight analysis we describe. The HeapDL page also contains instructions on how to produce heap dumps for both JVM and Android platforms, which are required in order to utilize the featherweight analysis.
+
+In order to invoke the featherweight analysis, you need to add the `--featherweight-analysis` flag, together with the `--heapdl` flag to your invocation of Doop, as follows:
+
+```
+./doop -a context-insensitive -i <jar to analyze> --platform java_8 --featherweight-analysis --heapdl <heap dump file>
+```
+
+We also recommend the use of the `--reflection-classic` flag since it increases the analysis coverage of the application.
 
 
-<br/><br/>
 
 
-The code is simple. Just add a col class to your image, and another class specifying the width: one, two, or three columns wide. Here's the code for the last row of images above:
-
-<div class="img_row">
-    <img class="col two left" src="/img/6.jpg"/>
-    <img class="col one left" src="/img/11.jpg"/>
-</div>

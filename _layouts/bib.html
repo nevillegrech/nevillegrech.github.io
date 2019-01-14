@@ -1,6 +1,6 @@
 ---
 ---
-
+    
 {% if entry.abbr %}
   {% if site.data.venues[entry.abbr] %}
     <abbr>[<a href="{{site.data.venues[entry.abbr].url}}" target="_blank">{{entry.abbr}}</a>]</abbr>
@@ -60,7 +60,12 @@
     </span>
   {% endif %}
 
-  <span class="links">
+    <span class="links">
+
+  {% if entry.award %}
+    <font size="+0" color="red">(🏆 {{entry.award}} 🏆)</font> 
+  {% endif %}
+      
   {% if entry.abstract %}
     [<a class="abstract">Abs</a>]
   {% endif %}
