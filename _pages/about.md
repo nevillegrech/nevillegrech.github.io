@@ -2,7 +2,7 @@
 layout: about
 permalink: /
 title: <strong>Neville</strong> Grech
-description: <a href="">Research Fellow</a>. University of Athens and University of Malta.
+description: <a href="">Lecturer</a>. University of Malta.
 
 profile:
   align: right
@@ -12,4 +12,4 @@ news: false
 social: true
 ---
 
-I am a Reach High fellow at the University of Athens, as well as at the University of Malta. My expertise is focused on program analysis, applied to security and other high-level applications. My research work has been awarded research highlight awards by ACM SIGPLAN and Communications of the ACM. I have also published in the areas of energy efficient systems, smart contracts, semantics and generative programming. My research tools include decompilers and security analyzers for the Ethereum platform (contract-library.com) and Java pointer and taint analysis frameworks (Doop, P/Taint and HeapDL). Previously, I was a Research Associate at the University of Bristol, and have worked in industry as a Data Scientist and Software Engineer. I hold a PhD from the University of Southampton.
+I am a Lecturer at the University of Malta. My expertise is focused on program analysis, applied to security and other high-level applications. My research work has been awarded research highlight awards by ACM SIGPLAN and Communications of the ACM. I am also interested in the areas of energy efficient systems, smart contracts, semantics and generative programming. My research tools include decompilers and security analyzers for the Ethereum platform (Gigahorse) and Java pointer and taint analysis frameworks (Doop, P/Taint and HeapDL). Previously, I was Reach High Fellow at the University of Athens, a Senior Research Associate at the University of Bristol, and have worked in industry as a Data Scientist and Software Engineer. I hold a PhD from the University of Southampton.
