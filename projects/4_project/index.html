@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Neville Grech</title>
+  <title>Neville Grech | Shooting From the Heap</title>
   <meta name="description" content="Personal Web Site
 ">
 
   <link rel="shortcut icon" href="https://www.nevillegrech.com/assets/img/favicon.ico">
 
   <link rel="stylesheet" href="https://www.nevillegrech.com/assets/css/main.css">
-  <link rel="canonical" href="https://www.nevillegrech.com/blog/">
+  <link rel="canonical" href="https://www.nevillegrech.com/projects/4_project/">
 </head>
 
 
@@ -88,32 +88,43 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="header-bar">
-  <h1>Neville Grech</h1>
-  <h2>Personal Website</h2>
-</div>
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Shooting From the Heap</h1>
+    <h5 class="post-description">Ultra-Scalable Static Analysis with Heap Snapshots</h5>
+  </header>
+
+  <article class="post-content Shooting From the Heap clearfix">
+    <p><a href="http://www.nevillegrech.com/assets/pdf/shootingfromtheheap-issta18.pdf">Shooting from the Heap: Ultra-Scalable Static Analysis with Heap Snapshots (pdf)</a></p>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>Traditional whole-program static analysis (e.g., a points-to analysis that models the heap) encounters scalability problems for realistic applications.  We propose a “featherweight” analysis that combines a dynamic snapshot of the heap with otherwise full static analysis of program behavior. The analysis is extremely scalable, offering speedups of well over 3x, with complexity empirically evaluated to grow linearly relative to the number of reachable methods. The analysis is also an excellent tradeoff of precision and recall (relative to different dynamic executions): while it can never fully capture all program behaviors (i.e., it cannot match the near-perfect recall of a full static analysis) it often approaches it closely while achieving much higher (3.5x) precision.</p>
+
+<h2 id="download-and-usage">Download and Usage</h2>
+<p>This work is part of the <a href="https://bitbucket.org/yanniss/doop">Doop pointer analysis framework</a>. Please first follow the instructions for the installation of Doop. You can test that the installation was successful by running Doop using standard options:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./doop -a context-insensitive -i &lt;jar to analyze&gt; --platform java_8
+</code></pre></div></div>
+
+<p>Doop also automatically downloads <a href="https://github.com/plast-lab/heapdl">HeapDL</a>, which is used by the featherweight analysis we describe. The HeapDL page also contains instructions on how to produce heap dumps for both JVM and Android platforms, which are required in order to utilize the featherweight analysis.</p>
+
+<p>In order to invoke the featherweight analysis, you need to add the <code class="language-plaintext highlighter-rouge">--featherweight-analysis</code> flag, together with the <code class="language-plaintext highlighter-rouge">--heapdl</code> flag to your invocation of Doop, as follows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./doop -a context-insensitive -i &lt;jar to analyze&gt; --platform java_8 --featherweight-analysis --heapdl &lt;heap dump file&gt;
+</code></pre></div></div>
+
+<p>We also recommend the use of the <code class="language-plaintext highlighter-rouge">--reflection-classic</code> flag since it increases the analysis coverage of the application.</p>
 
 
-<ul class="post-list">
+  </article>
+
   
-</ul>
 
+  
 
-<div class="pagination clearfix mb1 mt4">
-  <div class="left">
-    
-      <span class="pagination-item disabled">Newer</span>
-    
-  </div>
-  <div class="right">
-    
-      <span class="pagination-item disabled">Older</span>
-    
-  </div>
-  <div class="pagination-meta">Page  of </div>
 </div>
-
-
 
       </div>
     </div>
