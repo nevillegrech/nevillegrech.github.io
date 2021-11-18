@@ -7,6 +7,9 @@ description:
 
 |link|description||
 |---|:---:|---|
+| [ISSTA2022](https://conf.researchr.org/home/issta-2022) | Program Committee  | ACM SIGSOFT International Symposium on Software Testing and Analysis |
+| [PLDI2022](https://pldi22.sigplan.org/) | Program Committee  | ACM SIGPLAN Conference on Programming Language Design and Implementation  |
+| [OOPSLA2022](https://2022.splashcon.org/track/splash-2022-oopsla) | Program Committee  | Object-Oriented Programming, Systems, Languages & Applications |
 | [ASPLOS2021](https://asplos-conference.org/) | External Program Committee  | ACM SIGPLAN Conference on Architectural Support for Programming Languages and Operating Systems |
 | [SCAM2020](http://www.ieee-scam.org/2020/) | Program Committee  | IEEE International Working Conference on Source Code Analysis and Manipulation |
 | [ACISP2020](http://nsclab.org/acisp2020/) | Program Committee | Australasian Conference on Information Security and Privacy |
